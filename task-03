@@ -124,7 +124,7 @@
                     const [a, b, c] = pattern;
                     if (gameBoard[a] !== '' && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
                         gameActive = false;
-                        status.textContent = Player ${currentPlayer} wins!;
+                        status.textContent = `Player ${currentPlayer} wins!`;
                         highlightWinningCells(pattern);
                         return;
                     }
@@ -141,14 +141,14 @@
             }
 
             function updateStatus() {
-                status.textContent = Player ${currentPlayer}'s turn;
+                status.textContent = `Player ${currentPlayer}'s turn`;
             }
 
             function resetGame() {
                 gameBoard = ['', '', '', '', '', '', '', '', ''];
                 gameActive = true;
                 currentPlayer = 'X';
-                status.textContent = Player ${currentPlayer}'s turn;
+                status.textContent = `Player ${currentPlayer}'s turn`;
 
                 cells.forEach(cell => {
                     cell.textContent = '';
